@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def getAll():
     try:
-        with open('../citacoes.json', 'r') as file:
+        with open('../common/citacoes.json', 'r') as file:
             citations = file.read()
 
         return jsonify(citations)

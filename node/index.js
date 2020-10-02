@@ -1,7 +1,6 @@
 var server = require("express")();
 var fs = require("fs");
-var citacoesObject = JSON.parse(fs.readFileSync("./../citacoes.json", "utf8"));
-
+var citacoesObject = JSON.parse(fs.readFileSync("../common/citacoes.json", "utf8"));
 function filterById(req, res) {
   const {
     params: { id: queryID }

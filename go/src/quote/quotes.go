@@ -14,7 +14,7 @@ import (
 func getAllQuotes() Book {
 	re := regexp.MustCompile("go$")
 	goPath := os.Getenv("GOPATH")
-    path := re.ReplaceAllString(goPath, "citacoes.json")
+    path := re.ReplaceAllString(goPath, "../../../common/citacoes.json")
 	b, errFile := ioutil.ReadFile(filepath.FromSlash(path)) // just pass the file name
     if errFile != nil {
 		log.Fatal(errFile)
